@@ -6,14 +6,11 @@ library(lubridate)
 
 shinyServer(function(input, output) {
   
-  getData <- reactive({
-    data <- read.csv("data/event_lang_day.csv", stringsAsFactor = F)
-    return(data)
-  })
+  data <- read.csv("data/event_lang_day.csv", stringsAsFactor = F)
   
   output$dateRange <- renderUI({
     ##| Set date range input
-#     data <- getData()
+    
     data$date <- as.Date(data$date)
     min_date <- min(data$date)
     max_date <- max(data$date)
@@ -27,7 +24,7 @@ shinyServer(function(input, output) {
 
   output$event_type <- renderUI({
     ##| Set list of event types
-#     data <- getData()
+    
     event_list <- unique(data$type)
 
     selectInput(inputId = "event_type",
@@ -40,7 +37,6 @@ shinyServer(function(input, output) {
   getTopLang <- reactive({
     ##| Find top languages by eventtype 
     
-    data <- getData()
     data <- subset(data, date >= min(input$daterange) & date <= max(input$daterange))
     
     lang <- ddply(data, .(type, repository_language), summarise,
@@ -67,11 +63,6 @@ shinyServer(function(input, output) {
       geom_text(aes(label = seq(1,length(type)), y = 0), size = 3, hjust = 1.3)       
     
     print(p)
-
-#     p1 <- ggplot(data, aes(date,count_event)) +
-#             geom_line()
-#     
-#     print(p1)
 
     })
 })
