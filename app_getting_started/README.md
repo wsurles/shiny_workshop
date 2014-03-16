@@ -70,9 +70,11 @@ shinyUI(pageWithSidebar(
   ))
 ```
 Now save these files to the directory **app_getting_started**
+
 ![logo](www/directory.png?raw=true)
 
 Cool. Now set your working directory to the location of the file
+
 ![logo](www/setwd.png?raw=true)
 
 And then back up one level
@@ -84,5 +86,6 @@ Now you should be in the shiny_workshop directory. Type `getwd()` to see your wo
 Type `runApp("app_getting_started")` in the Rstudio terminal.
 
 Your default browser should open with an instance of your shiny app. It will look like this.
+
 ![logo](www/app.png?raw=true)
 
