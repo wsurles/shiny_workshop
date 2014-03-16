@@ -77,8 +77,7 @@ Cool. Now set your working directory to the location of the file
 
 ![logo](www/setwd.png?raw=true)
 
-And then back up one level
-setwd('../')
+And then back up one level by typing `setwd('../')` in the Rstudio terminal
 
 Now you should be in the shiny_workshop directory. Type `getwd()` to see your working directory.
 
