@@ -24,6 +24,7 @@ http://www.rstudio.com/ide/download/desktop
 #### Launch R studio 
 
 #### Install packages we will be using
+Just type this into the Rstudio terminal
 ```s
 install.packages("shiny")
 install.packages("plyr")
@@ -33,7 +34,7 @@ install.packages("lubridate")
 ```
 If you aleady have the package you will see a message about "updating loaded packages". Just click "cancel".
 
-Go ahead and load the packages
+Go ahead and load the packages by typing this into the Rstudio terminal
 ```s
 library(shiny)
 library(plyr)
@@ -45,11 +46,11 @@ library(lubridate)
 ## Now lets make a shiny app!
 
 #### Create the server and UI files
-Add these files to the directory **app_getting_started**
-![logo](www/directory.png?raw=true)
+Crete a new R script. 
+![logo](www/new_rscript.png?raw=true)
 
 ## server.R
-Set up your server file
+Put this code it in
 ```s
 shinyServer(function(input,output) {})
 ```
@@ -67,6 +68,8 @@ shinyUI(pageWithSidebar(
     )
   ))
 ```
+Now save these files to the directory **app_getting_started**
+![logo](www/directory.png?raw=true)
 
 Cool. Now set your working directory to the location of the file
 ![logo](www/setwd.png?raw=true)
