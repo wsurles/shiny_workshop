@@ -26,9 +26,9 @@ http://www.r-project.org/
 #### Get R Studio desktop
 http://www.rstudio.com/ide/download/desktop
 
-Launch R studio 
+#### Launch R studio 
 
-Install packages we will be using
+#### Install packages we will be using
 ```s
 install.packages("shiny")
 install.packages("plyr")
@@ -36,6 +36,8 @@ install.packages("ggplot2")
 install.packages("reshape2")
 install.packages("lubridate")
 ```
+If you aleady have the package you will see a message about "updating loaded packages". Just click "cancel".
+
 Load the packages
 ```s
 library(shiny)
@@ -45,18 +47,17 @@ library(reshape2)
 library(lubridate)
 ```
 
-Add two files to the directory **app_getting_started**
-
+#### Create the server and UI files
+Add these files to the directory **app_getting_started**
 ![logo](www/directory.png?raw=true)
 
-#### server.R
+## server.R
 Set up your server file
 ```s
 shinyServer(function(input,output) {})
 ```
 
-
-#### ui.R
+## ui.R
 Set up your UI file. We will make a spot for a title, inputs, and outputs.
 ```s
 shinyUI(pageWithSidebar(
