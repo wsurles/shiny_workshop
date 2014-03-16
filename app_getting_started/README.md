@@ -45,19 +45,22 @@ library(lubridate)
 
 ## Now lets make a shiny app!
 
-#### Create the server and UI files
-Crete a new R script. 
+We will create a **server.R** and **ui.R** file and save these files to the directory **app_getting_started**
+
+![logo](www/directory.png?raw=true)
+
+You can crete a new R script in the top left of Rstudio. 
 
 ![logo](www/new_rscript.png?raw=true  =100x20)
 
 #### server.R
-Put this code it in
+Put his code in the **server.R** file
 ```s
 shinyServer(function(input,output) {})
 ```
 
 #### ui.R
-Set up your UI file. We will make a spot for a title, inputs, and outputs.
+Put this code in the **ui.R** file. We make a spot for a title, inputs, and outputs.
 ```s
 shinyUI(pageWithSidebar(
   headerPanel("Just Getting Started"),
@@ -69,17 +72,12 @@ shinyUI(pageWithSidebar(
     )
   ))
 ```
-Now save these files to the directory **app_getting_started**
-
-![logo](www/directory.png?raw=true)
-
-Cool. Now set your working directory to the location of the file
+#### Set working directory
+Cool. Now set your working directory to the location of the file by choosing Session -> Set Working Directory -> To Source File Location.
 
 ![logo](www/setwd.png?raw=true)
 
-And then back up one level by typing `setwd('../')` in the Rstudio terminal
-
-Now you should be in the shiny_workshop directory. Type `getwd()` to see your working directory.
+And then back up one level by typing `setwd('../')` in the Rstudio terminal so you are in the **shiny_workshop** directory. Type `getwd()` to see your working directory.
 
 ## Run your shiny App
 Type `runApp("app_getting_started")` in the Rstudio terminal.
