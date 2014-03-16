@@ -24,6 +24,7 @@ shinyUI(pageWithSidebar(
 
 ![logo](files/www/rally_logo.png)
 
+![logo](www/rally_logo.png?raw=true)
 
 [http://www.githubarchive.org](http://www.githubarchive.org/)
 
