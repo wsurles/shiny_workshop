@@ -6,6 +6,20 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
+Lets do it!
+```R
+##| server.R
+shinyServer(function(input,output) {})
+```
+
+```R
+##| ui.R
+shinyUI(pageWithSidebar(
+  headerPanel("My first Shiny app"),
+  sidebarPanel(),
+  mainPanel()
+  ))
+```
 [http://www.githubarchive.org](http://www.githubarchive.org/)
 
 Open-source developers all over the world are working on millions of projects: writing code & documentation, fixing & submitting bugs, and so forth. GitHub Archive is a project to **record** the public GitHub timeline, **archive it**, and **make it easily accessible for** further analysis.
