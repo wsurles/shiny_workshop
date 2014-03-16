@@ -24,7 +24,7 @@ shinyUI(pageWithSidebar(
   ))
 ```
 
-![logo](www/step_1.png?raw=true)
+![step1](www/step_1.png?raw=true)
 
 ## Step 2
 
@@ -55,25 +55,34 @@ shinyServer(function(input,output){
 })
 ```
 
-![logo](www/step_2.png?raw=true)
+Change the selection and watch the magic happen!
+![step2](www/step_2.png?raw=true)
 
 ## Step 3
-## Step 4
-## Step 5
-## Step 6
-## Step 7
-## Step 8
-## Step 9
-## Step 10
-## Step 11
 
+Clean up your plot with some color and labels
+```s
+shinyServer(function(input,output){
 
+  output$main_plot <- renderPlot({  
+    hist(faithful$eruptions,
+         breaks = as.numeric(input$n_breaks),
+         col = "green",
+         xlab = "Duration (minutes)")  
+  })
+})
+```
 
+![step3](www/step_3.png?raw=true)
 
-
-
-
-Choose your own colors
+Choose your choose some more R colors from this site. 
 http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
-![logo](www/R_colors.png?raw=true)
+![colors](www/R_colors.png?raw=true)
+
+Type `?hist` in the RStudio terminal for more information on plotting histograms in R.
+
+----
+
+You are finished! Great Job! You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
+
 
