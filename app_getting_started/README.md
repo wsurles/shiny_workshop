@@ -10,7 +10,9 @@ The server sends your browser the html document. It tells the browser how to dra
 * You must write two files to make this work.  **server.R** and **ui.R**
 
 **server.R** says what to do with the data
+
 **ui.R** say how to show the data
+
 Pretty simple eh?
 
 ![logo](www/directory.png?raw=true)
