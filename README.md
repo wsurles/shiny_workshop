@@ -1,15 +1,32 @@
 # Shiny Workshop
 
-[http://www.githubarchive.org](http://www.githubarchive.org/)
+---
+What is Shiny?
+A library that allows you to easily make web applications with R
+http://www.rstudio.com/shiny/
 
-Open-source developers all over the world are working on millions of projects: writing code & documentation, fixing & submitting bugs, and so forth. GitHub Archive is a project to **record** the public GitHub timeline, **archive it**, and **make it easily accessible for** further analysis.
+Why do I like it?
+* You don't need to know HTML, CSS, or JavaScript. 
 
-![Stats](http://www.stathat.com//graphs/39/33/0b63991416f6b680e69f017a2c12.png?1340405820)
+* A webpage is a document written in HTML maintained by server.
+The server sends your browser the html document. It tells the browser how to draw the page.
 
-----
+* Shiny handles setting up server and the HTML for you. Many web pages are static. What you see is what you get. Shiny however lets you interact with the server through the UI. This allows for interative data analysis. The user can decide what they want to see and change the charts and tables based on what they click. So cool.
 
-Looking for the [daily top new & watched repository](http://us5.campaign-archive2.com/home/?u=439aa16a39e4b10e0b65ff2ef&id=0b82fec5c2) reports? [Sign up here](http://githubarchive.us5.list-manage.com/subscribe?u=439aa16a39e4b10e0b65ff2ef&id=0b82fec5c2).
+* You must write two files to make this work. 
+**server.R** says what to do with the data
+**ui.R** say how to show the data
+pretty simple eh?
 
-----
 
-GitHub provides [18 event types](http://developer.github.com/v3/activity/events/types/), which range from new commits and fork events, to opening new tickets, commenting, and adding members to a project. The activity is aggregated in hourly archives, which you can access with any HTTP client:
+
+
+
+big query link
+https://bigquery.cloud.google.com/table/publicdata:samples.github_timeline?pli=1
+
+
+
+
+
+Go to **app_getting_started**

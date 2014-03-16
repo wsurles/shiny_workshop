@@ -1,28 +1,26 @@
 # Getting Started - App 0
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
+
+![logo](www/directory.png?raw=true)
 
 Lets do it!
 ```s
-##| server.R
 shinyServer(function(input,output) {})
 ```
 
 ```s
-##| ui.R
 shinyUI(pageWithSidebar(
-  headerPanel("My first Shiny app"),
-  sidebarPanel(),
-  mainPanel()
+  headerPanel("Just Getting Started"),
+  sidebarPanel(
+    h4("Selection input will go here")
+    ),
+  mainPanel(
+    h4("Charts and tables will go here")
+    )
   ))
 ```
-![logo](https://github.com/wsurles/shiny_workshop/blob/master/app_getting_started/www/rally_logo.png "Rally Logo")
 
-![logo](files/www/rally_logo.png)
+![logo](www/app.png?raw=true)
 
 ![logo](www/rally_logo.png?raw=true)
 
