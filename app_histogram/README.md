@@ -1,5 +1,5 @@
 # Your First App - App 1
-
+----
 ## Step 1: Make a plot and display it in the main panel
 
 Make a histogram of old faithful eruption durations. This will be assigned to `output$main_plot`.
@@ -26,6 +26,7 @@ shinyUI(pageWithSidebar(
 
 ![step1](www/step_1.png?raw=true)
 
+----
 ## Step 2
 
 Add a selection input to the sidebar panel. Give it the id of "n_breaks". Label it. Set selection choices. Choose a default selection.
@@ -58,6 +59,7 @@ shinyServer(function(input,output){
 Change the selection and watch the magic happen!
 ![step2](www/step_2.png?raw=true)
 
+----
 ## Step 3
 
 Clean up your plot with some color and labels
@@ -75,7 +77,7 @@ shinyServer(function(input,output){
 
 ![step3](www/step_3.png?raw=true)
 
-Choose your choose some more R colors from this site. 
+Choose your own R colors from this site. 
 http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 ![colors](www/R_colors.png?raw=true)
 
