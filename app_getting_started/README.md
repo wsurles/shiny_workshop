@@ -20,6 +20,7 @@ shinyUI(pageWithSidebar(
   mainPanel()
   ))
 ```
+![logo](https://github.com/wsurles/shiny_workshop/blob/master/app_getting_started/www/rally_logo.png "Rally Logo")
 
 ![logo](files/www/rally_logo.png)
 
