@@ -28,7 +28,7 @@ shinyUI(pageWithSidebar(
 
 ## Step 2
 
-Add a selection input to the sidebar panel. Give it the id of "n_breaks". Label it. Set selction choices. Choose a default selection.
+Add a selection input to the sidebar panel. Give it the id of "n_breaks". Label it. Set selection choices. Choose a default selection.
 ```s
 shinyUI(pageWithSidebar(
   headerPanel("Simple Histogram App"),
@@ -55,7 +55,7 @@ shinyServer(function(input,output){
 })
 ```
 
-![logo](www/step_1.png?raw=true)
+![logo](www/step_2.png?raw=true)
 
 ## Step 3
 ## Step 4
