@@ -8,7 +8,7 @@ You only need to write **two** files to make this work.
 
 Pretty simple eh?
 
-## Lets do it!
+## Set up with R and Shiny
 
 Okay, first, lets get set up with R, Rstudio, and Shiny.
 
@@ -50,13 +50,13 @@ Crete a new R script.
 
 ![logo](www/new_rscript.png?raw=true  =100x20)
 
-## server.R
+#### server.R
 Put this code it in
 ```s
 shinyServer(function(input,output) {})
 ```
 
-## ui.R
+#### ui.R
 Set up your UI file. We will make a spot for a title, inputs, and outputs.
 ```s
 shinyUI(pageWithSidebar(
