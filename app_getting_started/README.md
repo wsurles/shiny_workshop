@@ -20,12 +20,15 @@ Pretty simple eh?
 Lets do it!
 
 Get R
+
 http://cran.cnr.berkeley.edu/
 
 If you are not here at the workshop in Colorado you can choose the closest CRAN mirror to you here
+
 http://www.r-project.org/
 
 Get R Studio desktop
+
 http://www.rstudio.com/ide/download/desktop
 
 Launch R studio 
