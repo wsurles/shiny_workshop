@@ -1,13 +1,6 @@
 # Getting Started - App 0
 
-* You don't need to know HTML, CSS, or JavaScript. 
-
-* A webpage is a document written in HTML maintained by server.
-The server sends your browser the html document. It tells the browser how to draw the page.
-
-* Shiny handles setting up server and the HTML for you. Many web pages are static. What you see is what you get. Shiny however lets you interact with the server through the UI. This allows for interative data analysis. The user can decide what they want to see and change the charts and tables based on what they click. So cool.
-
-* You must write two files to make this work.  **server.R** and **ui.R**
+You only need to write **two** files to make this work.
 
 **server.R** says what to do with the data
 
@@ -16,6 +9,8 @@ The server sends your browser the html document. It tells the browser how to dra
 Pretty simple eh?
 
 ## Lets do it!
+
+Okay, first, lets get set up with R, Rstudio, and Shiny.
 
 #### Get R
 http://cran.cnr.berkeley.edu/
@@ -38,7 +33,7 @@ install.packages("lubridate")
 ```
 If you aleady have the package you will see a message about "updating loaded packages". Just click "cancel".
 
-Load the packages
+Go ahead and load the packages
 ```s
 library(shiny)
 library(plyr)
@@ -46,6 +41,8 @@ library(ggplot2)
 library(reshape2)
 library(lubridate)
 ```
+
+## Now lets make a shiny app!
 
 #### Create the server and UI files
 Add these files to the directory **app_getting_started**
