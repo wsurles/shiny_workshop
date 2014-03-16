@@ -2,6 +2,7 @@
 
 ## What is Shiny?
 Shiny is a new package from RStudio that makes it incredibly easy to build interactive web applications with R
+
 For an introduction and live examples , visit the [Shiny homepage](http://www.rstudio.com/shiny) 
 
 ## Why do I like it?
