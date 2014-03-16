@@ -18,6 +18,35 @@ Pretty simple eh?
 ![logo](www/directory.png?raw=true)
 
 Lets do it!
+
+Get R
+http://cran.cnr.berkeley.edu/
+
+If you are not here at the workshop in Colorado you can choose the closest CRAN mirror to you here
+http://www.r-project.org/
+
+Get R Studio desktop
+http://www.rstudio.com/ide/download/desktop
+
+Launch R studio 
+
+Install packages we will be using
+```s
+install.packages("shiny")
+install.packages("plyr")
+install.packages("ggplot2")
+install.packages("reshape2")
+install.packages("lubridate")
+```
+Load the packages
+```s
+library(shiny)
+library(plyr)
+library(ggplot2)
+library(reshape2)
+library(lubridate)
+```
+
 ```s
 shinyServer(function(input,output) {})
 ```
