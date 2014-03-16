@@ -1,4 +1,4 @@
-# GitHub Archive
+# Getting Started - App 0
 
 [http://www.githubarchive.org](http://www.githubarchive.org/)
 

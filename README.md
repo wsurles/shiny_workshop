@@ -1,4 +1,4 @@
-# GitHub Archive
+# Shiny Workshop
 
 [http://www.githubarchive.org](http://www.githubarchive.org/)
 
