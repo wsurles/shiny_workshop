@@ -1,5 +1,5 @@
 # Your First App - App 1
-----
+
 ## Step 1: Make a plot and display it in the main panel
 
 Make a histogram of old faithful eruption durations. This will be assigned to `output$main_plot`.
@@ -85,6 +85,6 @@ Type `?hist` in the RStudio terminal for more information on plotting histograms
 
 ----
 
-You are finished! Great Job! You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
+**You are finished! Great Job!** You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
 
 
