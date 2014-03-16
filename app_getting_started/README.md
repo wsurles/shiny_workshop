@@ -7,12 +7,12 @@ puts markdown.to_html
 ```
 
 Lets do it!
-```r
+```S
 ##| server.R
 shinyServer(function(input,output) {})
 ```
 
-```r
+```s
 ##| ui.R
 shinyUI(pageWithSidebar(
   headerPanel("My first Shiny app"),
