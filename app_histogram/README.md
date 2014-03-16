@@ -27,7 +27,7 @@ shinyUI(pageWithSidebar(
 ![step1](www/step_1.png?raw=true)
 
 ----
-## Step 2
+## Step 2: Add selection input for the number of bins to show
 
 Add a selection input to the sidebar panel. Give it the id of "n_breaks". Label it. Set selection choices. Choose a default selection.
 ```s
@@ -60,7 +60,7 @@ Change the selection and watch the magic happen!
 ![step2](www/step_2.png?raw=true)
 
 ----
-## Step 3
+## Step 3: Clean up the histogram
 
 Clean up your plot with some color and labels
 ```s
