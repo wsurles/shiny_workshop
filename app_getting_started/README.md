@@ -47,6 +47,7 @@ library(lubridate)
 
 #### Create the server and UI files
 Crete a new R script. 
+
 ![logo](www/new_rscript.png?raw=true)
 
 ## server.R
