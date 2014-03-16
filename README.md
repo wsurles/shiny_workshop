@@ -1,32 +1,21 @@
 # Shiny Workshop
 
----
-What is Shiny?
-A library that allows you to easily make web applications with R
-http://www.rstudio.com/shiny/
+## What is Shiny?
+Shiny is a new package from RStudio that makes it incredibly easy to build interactive web applications with R
+For an introduction and live examples , visit the [Shiny homepage](http://www.rstudio.com/shiny) 
 
-Why do I like it?
-* You don't need to know HTML, CSS, or JavaScript. 
+## Why do I like it?
 
-* A webpage is a document written in HTML maintained by server.
-The server sends your browser the html document. It tells the browser how to draw the page.
-
-* Shiny handles setting up server and the HTML for you. Many web pages are static. What you see is what you get. Shiny however lets you interact with the server through the UI. This allows for interative data analysis. The user can decide what they want to see and change the charts and tables based on what they click. So cool.
-
-* You must write two files to make this work. 
-**server.R** says what to do with the data
-**ui.R** say how to show the data
-pretty simple eh?
+#### Some cool features: 
+* Build useful web applications with only a few lines of code - no javaScript required
+* Shiny applications are automatically 'live' in the same way that **spreadsheets** are live. Outputs change instantly as users modify inputs, without requiring a reload of the browser."),
+* Go to [http://www.rstudio.com/shiny/lessons/Intro/] for more fun tutorials and to see where I learned to make this")
 
 
+Check out the [Github timeline on Google Big Query](https://bigquery.cloud.google.com/table/publicdata:samples.github_timeline?pli=1)
 
 
-
-big query link
-https://bigquery.cloud.google.com/table/publicdata:samples.github_timeline?pli=1
-
-
-
+![logo](www/rally_logo.png?raw=true)
 
 
 Go to **app_getting_started**
