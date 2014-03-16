@@ -20,6 +20,10 @@ shinyUI(pageWithSidebar(
   mainPanel()
   ))
 ```
+
+![logo](files/www/rally_logo.png)
+
+
 [http://www.githubarchive.org](http://www.githubarchive.org/)
 
 Open-source developers all over the world are working on millions of projects: writing code & documentation, fixing & submitting bugs, and so forth. GitHub Archive is a project to **record** the public GitHub timeline, **archive it**, and **make it easily accessible for** further analysis.
