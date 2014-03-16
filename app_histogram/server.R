@@ -4,6 +4,6 @@ shinyServer(function(input,output){
 
   output$main_plot <- renderPlot({  
     hist(faithful$eruptions,
-         breaks = 20)  
+         breaks = as.numeric(input$n_breaks))  
   })
 })
