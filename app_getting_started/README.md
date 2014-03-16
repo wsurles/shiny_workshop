@@ -15,20 +15,15 @@ The server sends your browser the html document. It tells the browser how to dra
 
 Pretty simple eh?
 
-![logo](www/directory.png?raw=true)
+## Lets do it!
 
-Lets do it!
-
-Get R
-
+#### Get R
 http://cran.cnr.berkeley.edu/
 
 If you are not here at the workshop in Colorado you can choose the closest CRAN mirror to you here
-
 http://www.r-project.org/
 
-Get R Studio desktop
-
+#### Get R Studio desktop
 http://www.rstudio.com/ide/download/desktop
 
 Launch R studio 
@@ -50,10 +45,19 @@ library(reshape2)
 library(lubridate)
 ```
 
+Add two files to the directory **app_getting_started**
+
+![logo](www/directory.png?raw=true)
+
+#### server.R
+Set up your server file
 ```s
 shinyServer(function(input,output) {})
 ```
 
+
+#### ui.R
+Set up your UI file. We will make a spot for a title, inputs, and outputs.
 ```s
 shinyUI(pageWithSidebar(
   headerPanel("Just Getting Started"),
@@ -66,5 +70,17 @@ shinyUI(pageWithSidebar(
   ))
 ```
 
+Cool. Now set your working directory to the location of the file
+![logo](www/setwd.png?raw=true)
+
+And then back up one level
+setwd('../')
+
+Now you should be in the shiny_workshop directory. Type `getwd()` to see your working directory.
+
+## Run your shiny App
+Type `runApp("app_getting_started")` in the Rstudio terminal.
+
+Your default browser should open with an instance of your shiny app. It will look like this.
 ![logo](www/app.png?raw=true)
 
