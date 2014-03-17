@@ -40,6 +40,8 @@ print(p)
 
 ----
 ## Step 2: Put the code into a shiny app
+
+Add the code into the server function. Put the plot into and output function
 ```s
 library(plyr)
 library(ggplot2)
@@ -72,6 +74,23 @@ shinyServer(function(input, output) {
   })
   
 })
+```
+
+Add a selection input
+```s
+shinyUI(pageWithSidebar(
+  headerPanel("Github Top Languages"),
+  sidebarPanel(
+    selectInput(inputId = "event_type",
+                label = "Event Type:",
+                choices = c("PushEvent","WatchEvent","CreateEvent"),
+                selected = "PushEvent"
+                )
+    ),
+  mainPanel(
+    plotOutput(outputId = "main_plot", height = "600px")
+    )
+  ))
 ```
 
 ```s
