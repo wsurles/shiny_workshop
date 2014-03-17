@@ -90,7 +90,7 @@ shinyUI(pageWithSidebar(
 ![step2](www/step_2.png?raw=true)
 
 ----
-## Step 3: 
+## Step 3: Link the UI and server
 
 Add a selection input for the event type
 ```s
@@ -142,7 +142,7 @@ output$main_plot <- renderPlot({
 ![step3](www/step_3.png?raw=true)
 
 ----
-## Step 4: 
+## Step 4: Add date inputs
 
 Add a start and end date input to the **sideBarPanel**
 ```s
