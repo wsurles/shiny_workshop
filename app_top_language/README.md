@@ -7,7 +7,7 @@
 1. Summarize the event count by language
 1. Subset on just the PushEvents
 1. Reorder by event count
-1. Make a new variabel with just the top 20
+1. Make a new variable with just the top 20
 1. Reorder the factors so the plot is also in order
 1. Make a bar plot of the events
 
@@ -84,7 +84,7 @@ shinyUI(pageWithSidebar(
   ))
   ```    
 
-![step1](www/step_1.png?raw=true)
+![step2](www/step_2.png?raw=true)
 
 ----
 ## Step 2: 
