@@ -179,20 +179,13 @@ getTopLang <- reactive({
 ![step4](www/step_4.png?raw=true)
 
 ----
-## Step 5: 
 
-![step5](www/step_5.png?raw=true)
+**You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
 
-----
-## Step 6: 
+If you want to see some real apps in Action you can check out some of the apps on the RStudio showcase
+http://www.rstudio.com/shiny/showcase/
 
-![step6](www/step_6.png?raw=true)
-----
-
-**You are finished! Great Job!** You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
-
-Here is a cool app to see how many bikes are at a station with a bike share program. Click on the first map image to see the app in action. At the top select boulder to see our bike share program if you need a way to get home after this workshop. 
+If you need a way to get home tonight, here is a cool app to see how many bikes are at a bike share station near you. Click on the first map image to see the app in action. At the top select boulder to see our bike share program.
 http://ramnathv.github.io/bikeshare/
-This app utilizes shiny and rCharts 
 
 
