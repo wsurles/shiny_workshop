@@ -1,5 +1,5 @@
 # Finding top programming languages on Github
-####test
+
 ## Step 1: Get, crunch, and plot data
 #### Process:
 1. Load the libraries
@@ -76,7 +76,23 @@ shinyServer(function(input, output) {
 })
 ```
 
-Add a selection input
+Add a chart output. 
+```s
+shinyUI(pageWithSidebar(
+  headerPanel("Github Top Languages"),
+  sidebarPanel(),
+  mainPanel(
+    plotOutput(outputId = "main_plot", height = "600px")
+    )
+  ))
+  ```    
+
+![step2](www/step_2.png?raw=true)
+
+----
+## Step 3: 
+
+Add a selection input for the event type
 ```s
 shinyUI(pageWithSidebar(
   headerPanel("Github Top Languages"),
@@ -93,20 +109,6 @@ shinyUI(pageWithSidebar(
   ))
 ```
 
-```s
-shinyUI(pageWithSidebar(
-  headerPanel("Github Top Languages"),
-  sidebarPanel(),
-  mainPanel(
-    plotOutput(outputId = "main_plot", height = "600px")
-    )
-  ))
-  ```    
-
-![step2](www/step_2.png?raw=true)
-
-----
-## Step 3: 
 Add the top language calculation to a reactive function. This allows it to be recalculated when an input changes in the UI. Also change `"PushEvent"` to `input$event_type`. Then add a call to this function in the top of the renderPlot funciton. 
 
 ```s
@@ -140,11 +142,51 @@ output$main_plot <- renderPlot({
 ![step3](www/step_3.png?raw=true)
 
 ----
-## Step 3: 
+## Step 4: 
 
-![step3](www/step_3.png?raw=true)
+Add a start and end date input to the **sideBarPanel**
+```s
+ sidebarPanel(
+    selectInput(inputId = "event_type",
+                label = "Event Type:",
+                choices = c("PushEvent","WatchEvent","CreateEvent"),
+                selected = "PushEvent"
+                ),
+    dateInput("start_date", "Start Date:", value = "2014-01-01"),
+    dateInput("end_date", "End Date:", value = "2014-03-16")
+    ),
+```
+Subset on dates at the top of the **getTopLang** function
+```s
+getTopLang <- reactive({
+    ##| Find top languages by eventtype 
+  
+    ## subset data by date range 
+    data <- subset(data,date >= input$start_date & date <= input$end_date)
+    
+    ## summarize events by language
+    lang <- ddply(data, .(type, repository_language), summarise,
+                  num_event = sum(count_event))
+    lang <- subset(lang,type == input$event_type)
+    lang <- lang[order(lang$num_event, decreasing=T),]
+    
+    ## find top languages and put languages in order 
+    top_lang <- lang[1:20,]
+    top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event)) 
+  })
+```
 
+![step4](www/step_4.png?raw=true)
 
+----
+## Step 5: 
+
+![step5](www/step_5.png?raw=true)
+
+----
+## Step 6: 
+
+![step6](www/step_6.png?raw=true)
 ----
 
 **You are finished! Great Job!** You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 

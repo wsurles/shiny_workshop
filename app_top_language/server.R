@@ -12,6 +12,8 @@ shinyServer(function(input, output) {
   getTopLang <- reactive({
     ##| Find top languages by eventtype 
   
+    ## subset data by date range 
+    data <- subset(data,date >= input$start_date & date <= input$end_date)
     ## summarize events by language
     lang <- ddply(data, .(type, repository_language), summarise,
                   num_event = sum(count_event))
