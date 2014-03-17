@@ -1,7 +1,45 @@
 # Finding top programming languages on Github
 
 ## Step 1: Get, crunch, and plot data
+#### Steps:
+* Load the libraries
+* Load the data from a csv file
+* Summarize the event count by language
+* Subset on jsut the PushEvents
+* Reorder by event count
+* Make a new variabel with just the top 20
+* Reorder the factors so the plot is also in order
+* Make a bar plot of the events
 
+```s
+library(plyr)
+library(ggplot2)
+library(reshape2)
+library(lubridate)
+
+## load data
+data <- read.csv("data/event_lang_day.csv", stringsAsFactor = F)
+
+## summarize events by language
+lang <- ddply(data, .(type, repository_language), summarise,
+              num_event = sum(count_event))
+lang <- subset(lang,type == "PushEvent")
+lang <- lang[order(lang$num_event, decreasing=T),]
+
+## find top languages and put languages in order 
+top_lang <- lang[1:20,]
+top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event)) 
+
+## make a bar chart of the top languages
+p <- ggplot(top_lang, aes(repository_language, num_event)) +
+  geom_bar(stat="identity", fill = 'steelblue', alpha = .7) +
+  coord_flip()
+print(p)
+```
+![step1](www/step_1.png?raw=true)
+
+----
+## Step 2: Put the code into a shiny app
 ```s
 library(plyr)
 library(ggplot2)
