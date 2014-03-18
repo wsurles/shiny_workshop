@@ -203,8 +203,9 @@ getTopLang <- reactive({
 
 **You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
 
-#### Here are some real apps you can try to create or use to find a bike for your ride home tonight. 
-[Visualizing Bike Sharing Networks](http://ramnathv.github.io/bikeshare/)
-[Shiny showcase on RStudio](http://www.rstudio.com/shiny/showcase/)
+#### Real Shiny Apps
+Here are some Shiny Apps you can try to create or use to find a bike for your ride home tonight
+* [Visualizing Bike Sharing Networks](http://ramnathv.github.io/bikeshare/)
+* [Shiny showcase on RStudio](http://www.rstudio.com/shiny/showcase/)
 
 
