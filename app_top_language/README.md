@@ -10,12 +10,14 @@ But if you would like to do this later. These links will help.
 You can get setup here if you have a google account. 
 * [GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/githubarchive:github.timeline)
 
-
-
 Other things you will want to be familar with for doing big data analytics in R
 * [Using Implala with R](http://blog.cloudera.com/blog/2013/12/how-to-do-statistical-analysis-with-impala-and-r/)
 * [Using Hive on R](http://cran.r-project.org/web/packages/hive/hive.pdf)
 * [Hadoop and R](http://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html)
+
+Also, go learn SQL right away if you don't know it yet.
+http://sql.learncodethehardway.org/
+http://www.w3schools.com/sql/
 
 This is too much for a two hour workshop but I will show you what it looks like to get the data from Google Big Query then we will get started with this App. 
 
