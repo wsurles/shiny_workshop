@@ -1,5 +1,28 @@
 # Finding top programming languages on Github
 
+I have downloaded the data we will be working with today and placed it in this repo so you do not need to go through all the Google Developer set up steps. 
+
+But if you would like to do this later. These links will help.
+* [Github archive on Github](https://github.com/igrigorik/githubarchive.org/tree/master/bigquery)
+* [Instructions on accessing the gihub archive](http://www.githubarchive.org/)
+* [Event Types in Github timeline](http://developer.github.com/v3/activity/events/types/)
+
+You can get setup here with your google account. 
+* [GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/githubarchive:github.timeline)
+
+Other things you will want to be familar with for doing big data analytics in R
+* [Using Implala with R](http://blog.cloudera.com/blog/2013/12/how-to-do-statistical-analysis-with-impala-and-r/)
+* [Using Hive with R](http://cran.r-project.org/web/packages/hive/hive.pdf)
+* [Hadoop and R](http://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html)
+
+Also, go learn SQL right after this workshop if you don't know it yet.
+* http://sql.learncodethehardway.org/
+* http://www.w3schools.com/sql/
+
+This is too much for a two hour workshop but I will show you what it looks like to get the data from Google Big Query then we will get started with this App. 
+
+Okay, Onward! Lets make this app!
+
 ## Step 1: Get, crunch, and plot data
 #### Process:
 1. Load the libraries
@@ -182,10 +205,9 @@ getTopLang <- reactive({
 
 **You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
 
-If you want to see some real apps in Action you can check out some of the apps on the RStudio showcase
-http://www.rstudio.com/shiny/showcase/
-
-If you need a way to get home tonight, here is a cool app to see how many bikes are at a bike share station near you. Click on the first map image to see the app in action. At the top select boulder to see our bike share program.
-http://ramnathv.github.io/bikeshare/
+#### Real Shiny Apps
+Here are some Shiny Apps you can try to create or use to find a bike for your ride home tonight
+* [Visualizing Bike Sharing Networks](http://ramnathv.github.io/bikeshare/)
+* [Shiny showcase on RStudio](http://www.rstudio.com/shiny/showcase/)
 
 
