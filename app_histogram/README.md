@@ -1,6 +1,49 @@
 # Your First App - The Basics of Shiny
 
-## Step 1: Make a plot and display it in the main panel
+## Step 1: Lets start with a few basics of R.
+
+R has built in data sets, so we can use them for Demos without any extra work. Lets play with the **faithful** dataset for a little bit before we start using shiny. 
+
+Comment out the server code with a hash and lets use some simple R functions to explore the **faithful** dataset
+
+```s
+# shinyServer(function(input,output){})
+
+## This is the faithful data set. Its in a dataframe. Lets look at its structure.
+str(faithful)
+
+## look at the top values
+head(faithful)
+
+## look at the last values
+tail(faithful)
+
+## look at the eruptions column
+faithful$eruptions
+
+## Look at the waiting column
+faithful$waiting
+
+## Make a table of values (counts of each) in the waiting column
+table(faithful$waiting)
+
+## Make a new variable of the first 10 values in eruptions$waiting
+var <- faithful$waiting[1:10]
+var
+
+## plot a histogram faithful$waiting
+hist(faithful$waiting)
+
+## get help on the'hist' funciton
+?hist
+
+## get help on the faitful dataset
+?faithful
+```
+
+Okay, onward!
+
+## Step 2: Make a plot and display it in the main panel
 
 Make a histogram of old faithful eruption durations. This will be assigned to `output$main_plot`.
 ```s
@@ -24,10 +67,10 @@ shinyUI(pageWithSidebar(
   ))
 ```
 
-![step1](www/step_1.png?raw=true)
+![step2](www/step_2.png?raw=true)
 
 ----
-## Step 2: Add selection input for the number of bins to show
+## Step 3: Add selection input for the number of bins to show
 
 Add a selection input to the sidebar panel. Give it the id of "n_breaks". Label it. Set selection choices. Choose a default selection.
 ```s
@@ -57,7 +100,7 @@ shinyServer(function(input,output){
 ```
 
 Change the **number of bins** and watch the magic happen!
-![step2](www/step_2.png?raw=true)
+![step3](www/step_3.png?raw=true)
 
 ----
 ## Step 3: Clean up the histogram
@@ -75,7 +118,7 @@ shinyServer(function(input,output){
 })
 ```
 
-![step3](www/step_3.png?raw=true)
+![step4](www/step_4.png?raw=true)
 
 Choose your own R colors from this site, or use any hex value (like #333333).
 http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
