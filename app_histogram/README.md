@@ -120,7 +120,7 @@ Choose your own R colors from this site, or use any hex value (like #333333).
 http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 ![colors](www/R_colors.png?raw=true)
 
-Type `?hist` in the RStudio terminal for more information on plotting histograms in R.
+Remember, you can type `?hist` in the RStudio terminal for more information on plotting histograms in R.
 
 ----
 
