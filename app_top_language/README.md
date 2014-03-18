@@ -204,7 +204,7 @@ getTopLang <- reactive({
 # [Advanced]
 ## Step 5: Annotate your plot
 
-Lets add some information to help us visualize our plot. 
+Lets add some information to our plot to help us understand our data. 
 ```s
 output$main_plot <- renderPlot({
     
@@ -236,9 +236,9 @@ Lets dynamically create our selection input options based on our data. Right now
 
 For the event type selection input, lets just show the event types that we have in our data. This way if the event types in the query change, the selection input will still work. 
 
-For the dates, lets only allow the use to select dates that we have in our data. And lets set the initial date range based on what we have in our data.
+For the dates, lets only allow the user to select dates that we have in our data. And, lets set the initial date range based on what we have in our data.
 
-Add these two **renderUI** functions under to our server function. Put them between the `data <- read.csv` and `getTopLang` functions.
+Add these two **renderUI** functions to our server function. Put them between the `data <- read.csv` and `getTopLang` functions.
 ```s
 output$dateRange <- renderUI({
     ##| Set date range input
@@ -275,9 +275,12 @@ sidebarPanel(
     ),
 ```
 
+Thats pretty cool! 
+
+There is a lot more you can add to this App. Make it your own. 
 ----
 
-**You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
+**You are finished! Great Job!** Thanks for joing me for this workshop!  
 
 #### Real Shiny Apps
 Here are some Shiny Apps you can try to create or use to find a bike for your ride home tonight
