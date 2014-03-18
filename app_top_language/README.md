@@ -15,11 +15,13 @@ Other things you will want to be familar with for doing big data analytics in R
 * [Using Hive with R](http://cran.r-project.org/web/packages/hive/hive.pdf)
 * [Hadoop and R](http://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html)
 
-Also, go learn SQL right away if you don't know it yet.
+Also, go learn SQL right after this workshop if you don't know it yet.
 * http://sql.learncodethehardway.org/
 * http://www.w3schools.com/sql/
 
 This is too much for a two hour workshop but I will show you what it looks like to get the data from Google Big Query then we will get started with this App. 
+
+Okay, Onward! Lets make this app!
 
 ## Step 1: Get, crunch, and plot data
 #### Process:
