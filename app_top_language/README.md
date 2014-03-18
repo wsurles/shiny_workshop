@@ -201,6 +201,80 @@ getTopLang <- reactive({
 
 ![step4](www/step_4.png?raw=true)
 
+# [Advanced]
+## Step 5: Annotate your plot
+
+Lets add some information to help us visualize our plot. 
+```s
+output$main_plot <- renderPlot({
+    
+    top_lang <- getTopLang()
+     
+    p <- ggplot(top_lang, aes(repository_language, num_event)) +
+      geom_bar(stat="identity", fill = 'steelblue', alpha = .7) +
+      scale_y_continuous(labels = comma, expand = c(.08,0)) +
+      coord_flip() +
+      geom_text(aes(label = num_event, y = num_event), size = 3, hjust = -.05) +
+      geom_text(aes(label = seq(1,length(type)), y = 0), size = 3, hjust = 1.3)       
+    
+    print(p)
+
+    })
+```
+
+![step5](www/step_5.png?raw=true)
+
+I would also encourage you to checkout interactive charts that work with Shiny. 
+* [rCharts](http://rcharts.io/)
+* [googleVis](http://cran.r-project.org/web/packages/googleVis/index.html)
+* [D3](http://d3js.org/)
+
+----
+## Step 6: Create dynamic selection input
+
+Lets dynamically create our selection input options based on our data. Right now our inputs are hard coded, which is not the best set up.
+
+For the event type selection input, lets just show the event types that we have in our data. This way if the event types in the query change, the selection input will still work. 
+
+For the dates, lets only allow the use to select dates that we have in our data. And lets set the initial date range based on what we have in our data.
+
+Add these two **renderUI** functions under to our server function. Put them between the `data <- read.csv` and `getTopLang` functions.
+```s
+output$dateRange <- renderUI({
+    ##| Set date range input
+    
+    data$date <- as.Date(data$date)
+    min_date <- min(data$date)
+    max_date <- max(data$date)
+
+    dateRangeInput("daterange", "Date range:",
+                   start = min_date,
+                   end   = max_date,
+                   min   = min_date,
+                   max   = max_date)
+  })
+
+  output$event_type <- renderUI({
+    ##| Set list of event types
+    
+    event_list <- unique(data$type)
+
+    selectInput(inputId = "event_type",
+                label = "Event Type:",
+                choices = event_list,
+                selected = event_list[1])
+    
+  })
+  ```
+
+Now in the UI lets build our inputs based on this output. Update the `sidebarPanel`.
+```s
+sidebarPanel(
+    uiOutput("event_type"),
+    uiOutput("dateRange")
+    ),
+```
+
 ----
 
 **You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
