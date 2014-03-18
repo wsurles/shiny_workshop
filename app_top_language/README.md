@@ -3,16 +3,16 @@
 I have downloaded the data we will be working with today and placed it in this repo so you do not need to go through all the Google Developer set up steps. 
 
 But if you would like to do this later. These links will help.
-* [Github archive on Github](https://github.com/igrigorik/githubarchive.org/tree/master/bigquery). Thanks Ilya Grigorik
+* [Github archive on Github](https://github.com/igrigorik/githubarchive.org/tree/master/bigquery)
 * [Instructions on accessing the gihub archive](http://www.githubarchive.org/)
 * [Event Types in Github timeline](http://developer.github.com/v3/activity/events/types/)
 
-You can get setup here if you have a google account. 
+You can get setup here with your google account. 
 * [GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/githubarchive:github.timeline)
 
 Other things you will want to be familar with for doing big data analytics in R
 * [Using Implala with R](http://blog.cloudera.com/blog/2013/12/how-to-do-statistical-analysis-with-impala-and-r/)
-* [Using Hive on R](http://cran.r-project.org/web/packages/hive/hive.pdf)
+* [Using Hive with R](http://cran.r-project.org/web/packages/hive/hive.pdf)
 * [Hadoop and R](http://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html)
 
 Also, go learn SQL right away if you don't know it yet.
