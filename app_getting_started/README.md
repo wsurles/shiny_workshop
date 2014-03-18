@@ -87,6 +87,6 @@ Your default browser should open with an instance of your shiny app. It will loo
 
 ----
 
-**You are finished! Great Job!** You created the framework for a shiny app. You are all set up with the software and are ready to make your first Shiny App. Now you can check out the advanced branch to try a few more cool features or help someone else near you that is not finished. We will start building our first app, **app_historgam** together soon.
+**You are finished! Great Job!** You created the framework for a shiny app. You are all set up with the software and are ready to make your first Shiny App. Help someone else near you that is not finished. We will start building our first app, **app_historgam** together soon.
 
 
