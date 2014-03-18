@@ -1,4 +1,4 @@
-# Your First App - App 1
+# Your First App - The Basics of Shiny
 
 ## Step 1: Make a plot and display it in the main panel
 
@@ -45,7 +45,7 @@ shinyUI(pageWithSidebar(
   ))
 ```
 
-Set the breaks to be the **input$n_breaks**. This value is passed from the selection input into the server file and the plot is regenerated everytime the selection changes. **as.numeric** just changes the character a to number.
+Set the breaks to be the **input$n_breaks**. This value is passed from the selection input into the server file and the plot is regenerated every time the selection changes. **as.numeric** just changes the character to a number.
 ```s
 shinyServer(function(input,output){
 
@@ -56,7 +56,7 @@ shinyServer(function(input,output){
 })
 ```
 
-Change the selection and watch the magic happen!
+Change the **number of bins** and watch the magic happen!
 ![step2](www/step_2.png?raw=true)
 
 ----
@@ -85,6 +85,6 @@ Type `?hist` in the RStudio terminal for more information on plotting histograms
 
 ----
 
-**You are finished! Great Job!** You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished.
+**You are finished! Great Job!** You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. We will build an app to find the top language on github soon. 
 
 
