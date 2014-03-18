@@ -1,5 +1,22 @@
 # Finding top programming languages on Github
 
+I have downloaded the data we will be working with today and placed it in this repo so you do not need to go through all the Google Developer set up steps. 
+
+But if you would like to do this later. These links will help.
+[Github archive on Github](https://github.com/igrigorik/githubarchive.org/tree/master/bigquery). Thanks Ilya Grigorik
+[Instructions on accessing the gihub archive](http://www.githubarchive.org/)
+
+You can get setup here if you have a google account. 
+[GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/publicdata:samples)
+
+
+Other things you will want to be familar with for doing big data analytics in R
+[Using Implala with R](http://blog.cloudera.com/blog/2013/12/how-to-do-statistical-analysis-with-impala-and-r/)
+[Using Hive on R](http://cran.r-project.org/web/packages/hive/hive.pdf)
+[Hadoop and R](http://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html)
+
+This is too much for a two hour workshop but I will show you what it looks like to get the data from Google Big Query then we will get started with this App. 
+
 ## Step 1: Get, crunch, and plot data
 #### Process:
 1. Load the libraries
