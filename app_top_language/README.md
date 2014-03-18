@@ -203,10 +203,8 @@ getTopLang <- reactive({
 
 **You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
 
-If you want to see some real apps in Action you can check out some of the apps on the RStudio showcase
-http://www.rstudio.com/shiny/showcase/
-
-If you need a way to get home tonight, here is a cool app to see how many bikes are at a bike share station near you. Click on the first map image to see the app in action. At the top select boulder to see our bike share program.
-http://ramnathv.github.io/bikeshare/
+#### Here are some real apps you can try to create or use to find a bike for your ride home tonight. 
+[Visualizing Bike Sharing Networks](http://ramnathv.github.io/bikeshare/)
+[Shiny showcase on RStudio](http://www.rstudio.com/shiny/showcase/)
 
 
