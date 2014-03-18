@@ -21,7 +21,10 @@ http://www.RStudio.com/ide/download/desktop
 
 #### Launch R studio
 
-#### Install packages we will be using
+#### Install packages we will be using. 
+
+Shiny is a package for R. We will use other packages also. These and other packages are what make R so great for data analysis. Props go to [the RStudio team](http://www.rstudio.com/about/) and [Hadley Wickham](https://github.com/hadley) for making all of this possible. 
+
 Just type this into the RStudio terminal
 ```s
 install.packages("shiny")
