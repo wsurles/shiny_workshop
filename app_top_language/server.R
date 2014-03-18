@@ -25,15 +25,14 @@ shinyServer(function(input, output) {
     top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event)) 
   })
   
-  output$main_plot <- renderPlot({        
-    ## make a bar chart of the top languages
-
+  output$main_plot <- renderPlot({
+    
     top_lang <- getTopLang()
     p <- ggplot(top_lang, aes(repository_language, num_event)) +
       geom_bar(stat="identity", fill = 'steelblue', alpha = .7) +
       coord_flip()
     print(p)
-  
+    
   })
 })
 
