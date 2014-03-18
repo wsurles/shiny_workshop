@@ -275,6 +275,8 @@ sidebarPanel(
     ),
 ```
 
+![step6](www/step_6.png?raw=true)
+
 Thats pretty cool! 
 
 There is a lot more you can add to this App. Make it your own. 
