@@ -10,7 +10,7 @@ For an introduction or to see some live examples, visit the [Shiny homepage](htt
 #### Some cool features: 
 * No JavaScript required. Shiny handles all that stuff. It may be the fastest way to build a useful web application to share data analysis in R.
 * It's live. Outputs change instantly as users modify inputs, without requiring a reload of the browser. 
-* Different users can see different segments of the data, or time ranges, or whatever they want. There's no need to to make 20 charts if you have 20 segments.
+* Different users can see different segments of the data, or time ranges, or whatever they want. There's no need to make 20 charts if you have 20 segments.
 * You can easily add in interactive charts like rCharts, GoogleVis or D3. You can also customize the look and feel of the page because it is, after all, a web page. We won't be doing that here, but the ability to customize the look and feel of the page is endless. 
 
 
