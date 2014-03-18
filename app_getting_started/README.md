@@ -19,7 +19,7 @@ http://www.r-project.org/
 #### Get R Studio desktop
 http://www.RStudio.com/ide/download/desktop
 
-#### Launch R studio 
+#### Launch R studio
 
 #### Install packages we will be using
 Just type this into the RStudio terminal
@@ -47,11 +47,11 @@ We will create a **server.R** and **ui.R** file and save these files to the dire
 
 ![logo](www/directory.png?raw=true)
 
-You can create a new R script in the top left of RStudio. 
+You can create a new R script in the top left of RStudio.
 
 ![logo](www/new_rscript.png?raw=true  =100x20)
 
-Put his code in the **server.R** file
+Put this code in the **server.R** file
 ```s
 shinyServer(function(input,output) {})
 ```

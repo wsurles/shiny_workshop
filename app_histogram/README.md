@@ -6,9 +6,9 @@ Make a histogram of old faithful eruption durations. This will be assigned to `o
 ```s
 shinyServer(function(input,output){
 
-  output$main_plot <- renderPlot({  
+  output$main_plot <- renderPlot({
     hist(faithful$eruptions,
-         breaks = 20)  
+         breaks = 20)
   })
 })
 ```
@@ -45,13 +45,13 @@ shinyUI(pageWithSidebar(
   ))
 ```
 
-Set the breaks to be the **input$n_breaks**. This value is passed from the selection input into the server file and the plot is regenerated everytime the selection changes. **as.numeric** just changes the character a to number. 
+Set the breaks to be the **input$n_breaks**. This value is passed from the selection input into the server file and the plot is regenerated everytime the selection changes. **as.numeric** just changes the character a to number.
 ```s
 shinyServer(function(input,output){
 
-  output$main_plot <- renderPlot({  
+  output$main_plot <- renderPlot({
     hist(faithful$eruptions,
-         breaks = as.numeric(input$n_breaks))  
+         breaks = as.numeric(input$n_breaks))
   })
 })
 ```
@@ -66,18 +66,18 @@ Clean up your plot with some color and labels
 ```s
 shinyServer(function(input,output){
 
-  output$main_plot <- renderPlot({  
+  output$main_plot <- renderPlot({
     hist(faithful$eruptions,
          breaks = as.numeric(input$n_breaks),
          col = "green",
-         xlab = "Duration (minutes)")  
+         xlab = "Duration (minutes)")
   })
 })
 ```
 
 ![step3](www/step_3.png?raw=true)
 
-Choose your own R colors from this site. 
+Choose your own R colors from this site, or use any hex value (like #333333).
 http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 ![colors](www/R_colors.png?raw=true)
 
@@ -85,6 +85,6 @@ Type `?hist` in the RStudio terminal for more information on plotting histograms
 
 ----
 
-**You are finished! Great Job!** You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
+**You are finished! Great Job!** You created your first Shiny App. You can check out the advanced branch to try some more cool features or help someone else near you that is not finished.
 
 
