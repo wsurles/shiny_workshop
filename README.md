@@ -18,7 +18,7 @@ For an introduction or to see some live examples, visit the [Shiny homepage](htt
 
 * We will build 2 shiny apps. 
 * The first app is a basic app to show how it works. 
-* The second uses data from the [GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/publicdata:samples.github_timeline?pli=1). We will rank the most popular languages this year on GitHub.
+* The second uses data from the [Github timeline on Google BigQuery](https://bigquery.cloud.google.com/table/githubarchive:github.timeline). We will rank the most popular languages this year on GitHub.
 * There is a **master** branch which you should work from. All the instructions are in the readme for each app directory.
 * If you get stuck take a look in the **answers** branch for help
 * If you finish quickly, checkout the **advanced** branch to add a few more cool features to your apps. 

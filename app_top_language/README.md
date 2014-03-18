@@ -5,9 +5,10 @@ I have downloaded the data we will be working with today and placed it in this r
 But if you would like to do this later. These links will help.
 * [Github archive on Github](https://github.com/igrigorik/githubarchive.org/tree/master/bigquery). Thanks Ilya Grigorik
 * [Instructions on accessing the gihub archive](http://www.githubarchive.org/)
-
+* [Event Types in Github timeline](http://developer.github.com/v3/activity/events/types/)
 You can get setup here if you have a google account. 
-* [GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/publicdata:samples)
+* [GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/githubarchive:github.timeline)
+
 
 
 Other things you will want to be familar with for doing big data analytics in R
