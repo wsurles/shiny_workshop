@@ -278,8 +278,8 @@ sidebarPanel(
 Thats pretty cool! 
 
 There is a lot more you can add to this App. Make it your own. 
-----
 
+----
 **You are finished! Great Job!** Thanks for joing me for this workshop!  
 
 #### Real Shiny Apps
