@@ -4,11 +4,7 @@
 
 R has built in data sets, so we can use them for Demos without any extra work. Lets play with the **faithful** dataset for a little bit before we start using shiny. 
 
-Comment out the server code with a hash and lets use some simple R functions to explore the **faithful** dataset
-
 ```s
-# shinyServer(function(input,output){})
-
 ## This is the faithful data set. Its in a dataframe. Lets look at its structure.
 str(faithful)
 
