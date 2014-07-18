@@ -9,7 +9,7 @@ shinyServer(function(input, output) {
   getTopLang <- reactive({
     eventLangData <- subset(eventLangData, date >= input$start_date & date <= input$end_date)
 
-    lang <- ddply(eventLangData, .(type, repository_language), summarise,
+    lang <- ddply(eventLangData, .(type, repository_language), summarize,
                   num_event = sum(count_event))
     lang <- subset(lang,type == input$event_type)
     lang <- lang[order(lang$num_event, decreasing=T),]

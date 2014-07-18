@@ -1,13 +1,13 @@
 # Finding top programming languages on Github
 
-I have downloaded the data we will be working with today and placed it in this repo so you do not need to go through all the Google Developer set up steps. 
+I have downloaded the data we will be working with today and placed it in this repo so you do not need to go through all the Google Developer set up steps.
 
 But if you would like to do this later. These links will help.
 * [Github archive on Github](https://github.com/igrigorik/githubarchive.org/tree/master/bigquery)
 * [Instructions on accessing the gihub archive](http://www.githubarchive.org/)
 * [Event Types in Github timeline](http://developer.github.com/v3/activity/events/types/)
 
-You can get setup here with your google account. 
+You can get setup here with your google account.
 * [GitHub timeline on Google BigQuery](https://bigquery.cloud.google.com/table/githubarchive:github.timeline)
 
 Other things you will want to be familar with for doing big data analytics in R
@@ -17,9 +17,8 @@ Other things you will want to be familar with for doing big data analytics in R
 
 Also, go learn SQL right after this workshop if you don't know it yet.
 * http://sql.learncodethehardway.org/
-* http://www.w3schools.com/sql/
 
-This is too much for a two hour workshop but I will show you what it looks like to get the data from Google Big Query then we will get started with this App. 
+This is too much for a two hour workshop but I will show you what it looks like to get the data from Google Big Query then we will get started with this App.
 
 Okay, Onward! Lets make this app!
 
@@ -44,14 +43,14 @@ library(lubridate)
 data <- read.csv("data/event_lang_day.csv", stringsAsFactor = F)
 
 ## summarize events by language
-lang <- ddply(data, .(type, repository_language), summarise,
+lang <- ddply(data, .(type, repository_language), summarize,
               num_event = sum(count_event))
 lang <- subset(lang,type == "PushEvent")
 lang <- lang[order(lang$num_event, decreasing=T),]
 
-## find top languages and put languages in order 
+## find top languages and put languages in order
 top_lang <- lang[1:20,]
-top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event)) 
+top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event))
 
 ## make a bar chart of the top languages
 p <- ggplot(top_lang, aes(repository_language, num_event)) +
@@ -72,34 +71,34 @@ library(reshape2)
 library(lubridate)
 
 shinyServer(function(input, output) {
-  
+
   ## load data
   data <- read.csv("data/event_lang_day.csv", stringsAsFactor = F)
-  
+
   ## summarize events by language
-  lang <- ddply(data, .(type, repository_language), summarise,
+  lang <- ddply(data, .(type, repository_language), summarize,
                 num_event = sum(count_event))
   lang <- subset(lang,type == "PushEvent")
   lang <- lang[order(lang$num_event, decreasing=T),]
-  
-  ## find top languages and put languages in order 
+
+  ## find top languages and put languages in order
   top_lang <- lang[1:20,]
-  top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event)) 
-  
+  top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event))
+
   output$main_plot <- renderPlot({
     ## make a bar chart of the top languages
     p <- ggplot(top_lang, aes(repository_language, num_event)) +
       geom_bar(stat="identity", fill = 'steelblue', alpha = .7) +
       coord_flip()
-    
+
     print(p)
-    
+
   })
-  
+
 })
 ```
 
-Add a chart output. 
+Add a chart output.
 ```s
 shinyUI(pageWithSidebar(
   headerPanel("Github Top Languages"),
@@ -108,7 +107,7 @@ shinyUI(pageWithSidebar(
     plotOutput(outputId = "main_plot", height = "600px")
     )
   ))
-  ```    
+  ```
 
 ![step2](www/step_2.png?raw=true)
 
@@ -132,26 +131,26 @@ shinyUI(pageWithSidebar(
   ))
 ```
 
-Add the top language calculation to a reactive function. This allows it to be recalculated when an input changes in the UI. Also change `"PushEvent"` to `input$event_type`. Then add a call to this function in the top of the renderPlot funciton. 
+Add the top language calculation to a reactive function. This allows it to be recalculated when an input changes in the UI. Also change `"PushEvent"` to `input$event_type`. Then add a call to this function in the top of the renderPlot funciton.
 
 ```s
 getTopLang <- reactive({
-    ##| Find top languages by eventtype 
-  
+    ##| Find top languages by eventtype
+
     ## summarize events by language
-    lang <- ddply(data, .(type, repository_language), summarise,
+    lang <- ddply(data, .(type, repository_language), summarize,
                   num_event = sum(count_event))
     lang <- subset(lang,type == input$event_type)
     lang <- lang[order(lang$num_event, decreasing=T),]
-    
-    ## find top languages and put languages in order 
+
+    ## find top languages and put languages in order
     top_lang <- lang[1:20,]
-    top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event)) 
+    top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event))
   })
 ```
 
 ```s
-output$main_plot <- renderPlot({        
+output$main_plot <- renderPlot({
   ## make a bar chart of the top languages
 
   top_lang <- getTopLang()
@@ -182,20 +181,20 @@ Add a start and end date input to the **sideBarPanel**
 Subset on dates at the top of the **getTopLang** function
 ```s
 getTopLang <- reactive({
-    ##| Find top languages by eventtype 
-  
-    ## subset data by date range 
+    ##| Find top languages by eventtype
+
+    ## subset data by date range
     data <- subset(data,date >= input$start_date & date <= input$end_date)
-    
+
     ## summarize events by language
-    lang <- ddply(data, .(type, repository_language), summarise,
+    lang <- ddply(data, .(type, repository_language), summarize,
                   num_event = sum(count_event))
     lang <- subset(lang,type == input$event_type)
     lang <- lang[order(lang$num_event, decreasing=T),]
-    
-    ## find top languages and put languages in order 
+
+    ## find top languages and put languages in order
     top_lang <- lang[1:20,]
-    top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event)) 
+    top_lang <- transform(top_lang, repository_language=reorder(repository_language, num_event))
   })
 ```
 
@@ -203,7 +202,7 @@ getTopLang <- reactive({
 
 ----
 
-**You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished. 
+**You are finished! Great Job!** You can check out the advanced branch to try some more cool features or help someone else near you that is not finished.
 
 #### Real Shiny Apps
 Here are some Shiny Apps you can try to create or use to find a bike for your ride home tonight
