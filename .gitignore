@@ -1,5 +1,7 @@
 #.gitignore
-
 explore.R
 notes.Rmd
 /figure
+/explore
+.httr-oauth
+.Rhistory
