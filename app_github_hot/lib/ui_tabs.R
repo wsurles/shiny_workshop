@@ -18,17 +18,16 @@ output$github <- renderUI({
     
     ##| Help
     fluidRow(
-      column(2, offset = 4, helpModal('Explain this Tool','help_github',inclMD("help/github_hot_or_not.md"))),          
+      column(3, offset = 3, helpModal('Explain this Tool','help_github',inclMD("help/github_hot_or_not.md"))),          
       column(2, offset = 0, emailButton('Send Feedback', 'mailto:williamsurles@gmail.com?subject=Feedback on Shiny Workshop'))
     ),
-    br(),
+    # br(),
+    hr(),
 
     ##| Filters
     fluidRow(
-      column(3, offset = 0, uiOutput("language")),
-      # column(3, uiOutput("module_region")),
-      # column(3, uiOutput("module_territory")),
-      column(3, uiOutput("repo_owner"))
+      column(2, offset = 1, uiOutput("language")),
+      column(3, offset = 0, uiOutput("repo_owner"))
     ),
     hr(),
 

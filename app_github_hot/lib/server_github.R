@@ -131,7 +131,7 @@ createPlotGithub <- function(df2, color) {
   p$chart(tooltipContent = "#!
           function(key, x, y, d){ 
             return '<h3>' + d.point.repository_name + '</h3>' +
-            '<p>' + '<b>' +  d.point.watch_per_day + ' New Watchers Per Day' + '</b>' +'</p>' +
+            '<p>' + '<b>' +  d.point.watch_per_day + ' Stars/Day' + '</b>' +'</p>' +
             '<p> Owner = ' +  d.point.repository_owner + '</p>' +
             '<p> Age in Days = ' +  d.point.age_days + '</p>' +                    
             '<p> Stars = ' +  d.point.repository_watchers + '</p>' +          
